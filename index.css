@@ -140,6 +140,16 @@ hr {
 	width: 100%;
 }
 
+#resume a:link {
+	text-decoration: none;
+	color: black;
+}
+
+#resume a:visited {
+	text-decoration: none;
+	color: black;
+}
+
 #technical_skills {
 	width: 100%;
 	background-color: white;
