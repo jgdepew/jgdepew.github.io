@@ -1,0 +1,278 @@
+body {
+	color: #DDDDDD;
+	background-color: black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    width: 100%;
+    height: auto;
+    padding-top: 45px;
+}
+
+/* navbar */
+
+#navbar ul {
+	position: fixed;
+    list-style-type: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    vertical-align: top;
+   	z-index: 99;
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+/* end navbar */
+
+/* parallax css */
+.parallax {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 300px;
+}
+
+.parallax0 {
+	background-image: url('images/LA0016.jpg');
+}
+
+.parallax1 {
+	background-image: url('images/pikes_place.jpg');
+}
+/* end parallax */
+
+/* tooltip */
+
+.tooltip {
+	display: inline;
+    position: relative;
+}
+
+.tooltip:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 26px;
+    color: #fff;
+    content: attr(title);
+    left: 20%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 220px;
+}
+
+.tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
+
+/* end tooltip*/
+
+iframe {
+	width: 49%;
+	margin-left: 0.5%;
+}
+
+h4, h5 {
+	text-align: center;
+	vertical-align: top;
+	padding-top: 1.5em;
+	margin-bottom: -0.25em;
+}
+
+hr {
+	width: 15%;
+}
+
+#container {
+	width: 100%;
+	left: 0;
+	right: 0;
+}
+
+#home {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: ;
+}
+
+#logo{
+	margin-left: 38%;
+	margin-top: 15%;
+	background-image: url('images/logo.png');
+	background-repeat: no-repeat;
+	width: 15em;
+	height: 5em;
+	transform: scale(1,1);
+	position: fixed;
+	opacity: 0.9;
+}
+
+#about_me {
+	margin-top: 50%;
+	background-color: beige;
+	color: black;
+	display: inline-block;
+	width: 100%;
+}
+
+#resume {
+	background-color: beige;
+	color: black;
+	display: inline-block;
+	width: 100%;
+}
+
+#technical_skills {
+	width: 100%;
+	background-color: white;
+}
+
+#technical_skills div {
+	display: inline-block;
+	height: 15em;
+	width: 30%;
+	margin-left: 2%;
+	vertical-align: top;
+}
+
+#technical_skills ul {
+	list-style-type: none; 
+	margin-right: 7%;
+}
+
+.languages {
+	width: 25%;
+	text-align: center;
+}
+
+#projects div {
+	display: inline-block;
+}
+
+/*#projects img {
+	width: 49.5%;
+	height: 12em;
+}*/
+
+.imgWrap {
+	position: relative;
+	width: 49%;
+	height: 12em;
+	margin-left: 0.25em;
+	z-index: 1;
+}
+
+.imgWrap img {
+	width: 100%;
+	height: 12em;
+}
+
+.imgDescription {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(29, 106, 154, 0.72);
+	color: #fff;
+	width: 100%;
+	height: 12em;
+	margin: 0;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.imgWrap:hover .imgDescription {
+  	visibility: visible;
+  	opacity: 0.9;
+}
+
+.imgDescription a:link {
+	text-decoration: none;
+	color: #fff;
+}
+
+.imgDescription a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
+#hobbies {
+	background-color: beige;
+	color: black;
+	display: inline-block;
+	width: 100%;
+}
+
+#contact {
+	width: 100%;
+}
+
+#contact div {
+	display: inline-block;
+}
+
+#contact img {
+	display: inline-block;
+}
+
+#profile_pic{
+	width: 10%;
+	margin-left: 7%;
+}
+
+#info {
+	text-align: left;
+	vertical-align: top;
+}
+
+#info img {
+	width: 3%;
+}
+
+#info a:link {
+	color: #DDDDDD;
+	text-decoration: none;
+}
+
+#info a:visited {
+	color: #DDDDDD;
+	text-decoration: none;
+}
+
+.description {
+	text-align: center;
+	width: 50%;
+	margin-left: 25%;
+}
+
+
+
+
+
