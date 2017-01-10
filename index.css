@@ -113,14 +113,6 @@ hr {
 	right: 0;
 }
 
-#home {
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	background-image: ;
-}
-
 #logo{
 	margin-left: 40%;
 	margin-top: 15%;
@@ -139,6 +131,7 @@ hr {
 	color: black;
 	display: inline-block;
 	width: 100%;
+	padding-bottom: 2em;
 }
 
 #resume {
@@ -175,10 +168,9 @@ hr {
 	display: inline-block;
 }
 
-/*#projects img {
-	width: 49.5%;
-	height: 12em;
-}*/
+#projects {
+	padding-bottom: 2em;
+}
 
 .imgWrap {
 	position: relative;
@@ -228,6 +220,7 @@ hr {
 	color: black;
 	display: inline-block;
 	width: 100%;
+	padding-bottom: 2em;
 }
 
 #contact {
