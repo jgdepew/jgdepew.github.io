@@ -130,6 +130,7 @@ hr {
 }
 
 #about_me {
+	margin-top: 25%;
 	height: auto;
 	background-color: #DDDDDD;
 	color: black;
