@@ -1,10 +1,12 @@
 body {
 	color: #DDDDDD;
 	background-color: black;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.5em;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    font-size: 1em;
     width: 100%;
     height: auto;
+    display: inline-block;
 }
 
 /* navbar */
@@ -26,6 +28,7 @@ body {
 
 #navbar li {
     float: left;
+    font-size: 1em;
 }
 
 #navbar li a {
@@ -48,11 +51,11 @@ body {
 }
 
 .parallax0 {
-	background-image: url('images/LA0016.jpg');
+	background-image: url('images/canyon.jpg');
 }
 
 .parallax1 {
-	background-image: url('images/pikes_place.jpg');
+	background-image: url('images/concert.jpg');
 }
 /* end parallax */
 
@@ -95,7 +98,7 @@ iframe {
 	margin-left: 0.5%;
 }
 
-h4, h5 {
+.title {
 	text-align: center;
 	vertical-align: top;
 	padding-top: 0.8em;
@@ -112,31 +115,55 @@ hr {
 	right: 0;
 }
 
-#logo{
-	margin-left: 40%;
-	margin-top: 15%;
-	background-image: url('images/logo.png');
-	background-repeat: no-repeat;
-	width: 15em;
-	height: 5em;
-	transform: scale(1,1);
-	position: fixed;
-	opacity: 0.9;
+#top {
+	background-color: black;
+	width:100%;
+	height: 800px;
+}
+
+#logo {
+  	position: fixed; /* or absolute */
+  	top: 50%;
+  	left: 50%;
+  	margin-top: -50px;
+  	margin-left: -150px;
 }
 
 #about_me {
-	margin-top: 50%;
-	background-color: beige;
+	height: auto;
+	background-color: #DDDDDD;
 	color: black;
 	display: inline-block;
 	width: 100%;
 	padding-bottom: 2em;
+	text-align: left;
+}
+
+#about_me div{
+	text-align: justify;
+	display: inline-block;
+	width:425px;
+	vertical-align: top;
+}
+
+#profile_pic{
+	width: 12em;
+	height: 18em;
+	margin-left: 27%;
+  	filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+
+#profile_pic:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
 }
 
 #resume {
-	background-color: beige;
+	padding-top: .25em;
+	background-color: #DDDDDD;
 	color: black;
-	display: inline-block;
+	display: block;
 	width: 100%;
 }
 
@@ -159,14 +186,14 @@ hr {
 	display: inline-block;
 	height: 15em;
 	width: 30%;
-	margin-left: 2%;
+	margin-left: 2.25%;
 	vertical-align: top;
 	margin-top: 1em;
 }
 
 #technical_skills ul {
 	list-style-type: none; 
-	margin-right: 7%;
+	margin-right: 2.5em;
 }
 
 #technical_skills h4 {
@@ -231,7 +258,7 @@ hr {
 }
 
 #hobbies {
-	background-color: beige;
+	background-color: #DDDDDD;
 	color: black;
 	display: inline-block;
 	width: 100%;
@@ -243,26 +270,16 @@ hr {
 	padding-bottom: 0.8em;
 }
 
-#contact div {
-	display: inline-block;
-}
-
-#contact img {
-	display: inline-block;
-}
-
-#profile_pic{
-	width: 10%;
-	margin-left: 7%;
-}
 
 #info {
 	text-align: left;
 	vertical-align: top;
+	margin-left: 42%;
+	font-size: .8em;
 }
 
 #info img {
-	width: 3%;
+	width: 2em;
 }
 
 #info a:link {
