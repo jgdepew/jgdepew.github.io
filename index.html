@@ -2,13 +2,16 @@
 <html>
 <head>
 	<title>Joseph Depew</title>
+    <!-- Bootstrap javascript -->
+<!--     <script src="bootstrap-3.3.7/js/bootstrap.js"></script> -->
+    <!-- CSS -->
     <link rel="stylesheet" href="index.css">
     <!-- jquery -->
     <!-- javascript at the bottom to save load time -->
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- google icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body id="body">
@@ -21,13 +24,15 @@
 		  	<li><a href="#contact">Contact</a></li>
 		</ul>
 	</div>
-	<div id="container">
+	<div id="content">
 		<div id="top"><img id="logo" src="images/logo.png"></div>
 		<div id="about_me">
 			<p class="title">About Me</p>
 			<hr>
-			<img id="profile_pic" src="images/profile_pic.JPG">
-			<div>Born in California, I moved to Seattle to attend the University of Washington. Up until then, I thought I knew what I wanted to become professionally. But like many other students, I quickly realized the profession wasn't for me. It took a while to find a career that captivated my attention and challenged the way I thought. After graduating from UW, I pursued my passion of Web Development and enrolled in Coding Dojo. <br><br>Web Development isn't my only passion. I played a multitude of sports growing up but was a soccer player first and foremost. I support our local Seattle Sounders as well as Chelsea FC. In addition, you can almost always find me plugged into headphones jamming away to the latest and greatest tunes or listening for how I can improve some songs I've written myself.</div>
+			<div id="about_me_content">
+				<img id="profile_pic" src="images/profile_pic.JPG">
+				<p>Born in California, I moved to Seattle to attend the University of Washington. Up until then, I thought I knew what career I wanted to pursue. But like many other students, I quickly realized that path wasn't for me. It took a while to find a career that captivated my attention and challenged the way I thought. After graduating from UW, I pursued my passion of Web Development and enrolled in Coding Dojo.<br><br>Web Development isn't my only passion. I played a multitude of sports growing up but am a soccer player first and foremost. I support our local Seattle Sounders as well as Chelsea FC. In addition, you can almost always find me plugged into headphones jamming away to the latest and greatest tunes or listening for how I can improve some songs I've written myself.</p>
+			</div>
 		</div>
 
 		<a title="This is some information for our tooltip."><span title="Photography by Nathaniel Solis."><div class="parallax parallax0"></div></span></a>
@@ -35,58 +40,78 @@
 		<div id="resume">
 			<p class="title">Résumé</p>
 			<hr>
-			<p class="description">After working over sixty hours per week in Coding Dojo's four month program, I am a Full Stack Developer in Python, Swift 3, and MEAN capable of deployment in Python and MEAN. Also proficient with HTML, CSS, and Twitter Bootstrap, I am currently working on freelance work while searching for full-time options. </p>
+			<p class="description">After working over sixty hours per week in Coding Dojo's four month program, I am a Full Stack Developer in Python, Swift 3, and MEAN capable of deployment in Python and MEAN. Additionally, I am proficient with HTML, CSS, and Twitter Bootstrap. Currently, I am working on freelance work and teaching students as a Teaching Assistant while searching for full-time options. </p>
 			<hr>
 			<p class="description">For a more formal résumé, <a href="Resume.pdf" target="_blank">click here</a>.</p>
 			
 			<div id="technical_skills">
 				<p class="title">Technical Skills</p>
 				<hr>
-				<div class="languages">
-					<img src="images/pythonLogo.png" height='50em' width='50em'>
-					<ul>
-						<li>Python</li>
-						<li>Django</li>
-						<li>Flask</li>
-						<li>AWS</li>
-					</ul>
-				</div>
-				<div class="languages">
-					<img src="images/javascriptLogo.png" height='50em' width='50em'>
-					<ul>
-						<li>Javascript</li>
-						<li>MongoDB</li>
-						<li>Express.js</li>
-						<li>Angular.js</li>
-						<li>Node.js</li>
-						<li>AWS</li>
-					</ul>
-				</div>				
-				<div class="languages">
-					<img src="images/appleLogo.png" height='50em' width='50em'>
-					<ul>
-						<li>iOS</li>
-						<li>Swift 2/3</li>
-						<li>xCode</li>
-						<li>CoreData</li>
-					</ul>
+				<div id="languages">
+					<div class="languages">
+						<img src="images/pythonLogo.png" height='50em' width='50em'>
+						<ul>
+							<li>Python</li>
+							<li>Django</li>
+							<li>Flask</li>
+							<li>AWS</li>
+						</ul>
+					</div>
+					<div class="languages">
+						<img src="images/javascriptLogo.png" height='50em' width='50em'>
+						<ul>
+							<li>Javascript</li>
+							<li>MongoDB</li>
+							<li>Express.js</li>
+							<li>Angular.js</li>
+							<li>Node.js</li>
+							<li>AWS</li>
+						</ul>
+					</div>				
+					<div class="languages">
+						<img src="images/appleLogo.png" height='50em' width='50em'>
+						<ul>
+							<li>iOS</li>
+							<li>Swift 2/3</li>
+							<li>xCode</li>
+							<li>CoreData</li>
+						</ul>
+					</div>
 				</div>
 			</div>	
 
 			<div id="projects">
 				<p class="title">Projects</p>
 				<hr>
+				<div id="projects-divs">
+					<div class="imgWrap">
+						<img id='potluck' src="images/potLuckScreenshot.png">
+						<div class="imgDescription">
+							<p>Project link: <a href="https://github.com/jgdepew/potluck">GitHub</a></p>
+							<!-- Trigger the modal with a button -->
+							<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#potluckModal">Description</button>
+						</div>
 
-				<div class="imgWrap">
-					<img id='potluck' src="images/potLuckScreenshot.png">
-					<p class="imgDescription">A social media website where individuals can share their favorite recipes with their friends. Completely built from scratch with the help of two other individuals. Uses Python and Django and features a login and registration page. Technical skills used include: Python, Django, Git/GitHub, and Javascript/Ajax. Project link: <a href="https://github.com/jgdepew/potluck">GitHub</a>.</p>
+					</div>
 
-				</div>
+					<div class="imgWrap">
+						<img id='potluck' src="images/goFish.png">
+						<div class="imgDescription">
+							<p>Project link: <a href="https://github.com/jgdepew/goFish">GitHub</a></p>
+							<!-- Trigger the modal with a button -->
+							<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#goFishModal">Description</button>
+						</div>
 
-				<div class="imgWrap">
-					<img id="shp" src="images/shpScreenshot.png">
-					<p class="imgDescription">Ongoing freelance work as part of a team of three for the Sunny Hills Palladium real estate company website.  Built using Javascript and Twitter bootstrap while paired with a backend of our own creation, including an admin page. Technical skills used: Javascript, the MEAN Stack, Git/GitHub, GoogleMaps API, Twitter Bootstrap, and AWS. Project link: <a href="https://github.com/jeffjkwok/shp_one">GitHub</a>. 
-					Also working on a senior living website under the same freelance project. Project link: <a href="https://github.com/jgdepew/vista_del_mar">GitHub</a>.</p>
+					</div>
+
+					<div class="imgWrap">
+						<img id="shp" src="images/shpScreenshot.png">
+						<div class="imgDescription">
+							<p>Project link: <a href="https://github.com/jeffjkwok/shp_one">GitHub</a></p>
+							<!-- Trigger the modal with a button -->
+							<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#shpModal">Description</button>
+						</div>
+					</div>
 				</div>
 
 			</div>
@@ -98,8 +123,11 @@
 		<div id="hobbies">
 			<p class="title">Hobbies</p>
 			<hr>
-			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/177291171&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/253980569&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+			<div id="soundcloud">
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/177291171&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/253980569&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/261836926&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+			</div>
 		</div>
 
 		<div id="contact">
@@ -109,51 +137,97 @@
 				<p><i class="material-icons">email</i> jgaudierdepew@gmail.com</p>
 				<p><i class="material-icons">phone</i> (949)468-6108</p>
 				<p><a href="https://www.linkedin.com/in/joseph-joe-depew-bbb97219"><img src="images/linkedInLogo.png"> LinkedIn</a></p>
-				<p><a href="https://github.com/jgdepew"><img src="images/githubLogo.png"> GitHub</a></p>
+				<p><a href="https://github.com/jgdepew"><img src="images/githubLogo.png">GitHub</a></p>
 			</div>
 		</div>
 	</div>
+	<!-- Modal -->
+	<div id="potluckModal" class="modal fade" role="dialog">
+  		<div class="modal-dialog">
+
+    		<!-- Modal content-->
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h4 class="modal-title">Potluck</h4>
+      			</div>
+      			<div class="modal-body">
+        			<p>A social media website where individuals can share their favorite recipes with their friends. Completely built from scratch with the help of two other individuals. Uses Python and Django and features a login and registration page. </p>
+
+        			<p>Technical skills used:</p>
+        			<ul>
+        				<li>Python</li>
+        				<li>Django</li>
+        				<li>Git/Github</li>
+        				<li>Javascript</li>
+        				<li>Ajax</li>
+        			</ul>
+					<img id='potluck' src="images/potLuckScreenshot.png">
+        			<p>Potluck Project link: <a href="https://github.com/jgdepew/potluck">GitHub</a></p>
+      			</div>
+      			<div class="modal-footer">
+      			</div>
+    		</div>
+
+ 		</div>
+	</div>
+	<div id="shpModal" class="modal fade" role="dialog">
+  		<div class="modal-dialog">
+
+    		<!-- Modal content-->
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h4 class="modal-title">Sunny Hills Palladium</h4>
+      			</div>
+      			<div class="modal-body">
+        			<p>Ongoing freelance work as part of a team of three for the Sunny Hills Palladium real estate company website.  Built using Javascript and Twitter bootstrap while paired with a backend of our own creation, including an admin page. </p>
+        			<p>Technical skills used:</p>
+        			<ul>
+        				<li>Javascript</li>
+        				<li>MEAN Stack</li>
+        				<li>Git/Github</li>
+        				<li>GoogleMaps API</li>
+        				<li>Twitter Bootstrap</li>
+        				<li>AWS</li>
+        			</ul>
+					<img id="shp" src="images/shpScreenshot.png">
+        			<p>SHP Project link: <a href="https://github.com/jeffjkwok/shp_one">GitHub</a></p>
+					<p>Also working on a senior living website under the same freelance project.</p>
+					<p>Vista Del Mar Project link: <a href="https://github.com/jgdepew/vista_del_mar">GitHub</a></p>
+      			</div>
+      			<div class="modal-footer">
+      			</div>
+    		</div>
+
+ 		</div>
+	</div>
+	<div id="goFishModal" class="modal fade" role="dialog">
+  		<div class="modal-dialog">
+
+    		<!-- Modal content-->
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h4 class="modal-title">Go Fish</h4>
+      			</div>
+      			<div class="modal-body">
+        			<p>A program that will run a simulation of "Go Fish" between 4 computer players. Each computer randomly picks a card from their hand and randomly picks an opponent from which to request that random card value. The game is finished once a player runs out of cards and the winner is decided by the player with the score. Each player gains a point when they gain a pair of matching card values. </p>
+        			<p>Technical skills used:</p>
+        			<ul>
+        				<li>Python</li>
+        				<li>OOP</li>
+        				<li>Git/Github</li>
+        			</ul>
+					<img id="shp" src="images/goFish.png">
+        			<p>Go Fish Project link: <a href="https://github.com/jeffjkwok/goFish">GitHub</a></p>
+      			</div>
+      			<div class="modal-footer">
+      			</div>
+    		</div>
+
+ 		</div>
+	</div>
 </body>
 
-<script>
-	$(document).ready(function(){
-		
-		// LOGO FUNCTIONALITY
-		$( window ).scroll(function() {
-			// if it is at top of the page
-  			if (window.pageYOffset < 55) {
-  				$('#logo').css('transform', 'scale(1.1)');
-				$('#logo').css('opacity', '0.9');
-  			} else if (window.pageYOffset > 300) { 
-  				// if it is past the logo
-  				$('#logo').css('opacity', '0');
-  			} else { 
-  				// the shrinking functionality
-  				$('#logo').css('transform', 'scale(' + (40 / (window.pageYOffset)) + ', ' + (40 / (window.pageYOffset))  + ')');
-				$('#logo').css('opacity', 40 / window.pageYOffset);
-  			}
-		});
-		$("#navbar ul li a[href^='#']").on('click', function(e) {
-
-		    // prevent default anchor click behavior
-		    e.preventDefault();
-
-		    // store hash
-		    var hash = this.hash;
-
-		   // animate
-		    $('html, body').animate({
-		        scrollTop: $(hash).offset().top
-		    }, 300, function(){
-
-		        // when done, add hash to url
-		        // (default click behaviour)
-		     	window.location.hash = hash;
-			});
-
-		});
-	});
-</script>
+<script src='javascript.js'></script>
 
 </html>
 
