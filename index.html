@@ -19,7 +19,7 @@
 		<ul>
 		  	<li><a href="#body">Home</a></li>
 		  	<li><a href="#about_me">About Me</a></li>
-		  	<li><a href="#resume">Résumé</a></li>
+		  	<li><a href="#resume">Resume</a></li>
 		  	<li><a href="#hobbies">Hobbies</a></li>
 		  	<li><a href="#contact">Contact</a></li>
 		</ul>
@@ -38,11 +38,11 @@
 		<a title="This is some information for our tooltip."><span title="Photography by Nathaniel Solis."><div class="parallax parallax0"></div></span></a>
 
 		<div id="resume">
-			<p class="title">Résumé</p>
+			<p class="title">Resume</p>
 			<hr>
 			<p class="description">After working over sixty hours per week in Coding Dojo's four month program, I am a Full Stack Developer in Python, Swift 3, and MEAN capable of deployment in Python and MEAN. Additionally, I am proficient with HTML, CSS, and Twitter Bootstrap. Currently, I am working on freelance work and teaching students as a Teaching Assistant while searching for full-time options. </p>
 			<hr>
-			<p class="description">For a more formal résumé, <a href="Resume.pdf" target="_blank">click here</a>.</p>
+			<p class="description">For a more formal resume, <a href="Resume.pdf" target="_blank">click here</a>.</p>
 			
 			<div id="technical_skills">
 				<p class="title">Technical Skills</p>
@@ -85,6 +85,15 @@
 				<hr>
 				<div id="projects-divs">
 					<div class="imgWrap">
+						<img id="shp" src="images/missingSemicolon.png">
+						<div class="imgDescription">
+							<p>Click Below for More</p>
+							<!-- Trigger the modal with a button -->
+							<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#blogModal">Description</button>
+						</div>
+					</div>
+
+					<div class="imgWrap">
 						<img id='potluck' src="images/potLuckScreenshot.png">
 						<div class="imgDescription">
 							<p>Project link: <a href="https://github.com/jgdepew/potluck">GitHub</a></p>
@@ -112,6 +121,7 @@
 							<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#shpModal">Description</button>
 						</div>
 					</div>
+
 				</div>
 
 			</div>
@@ -170,7 +180,7 @@
 
  		</div>
 	</div>
-	<div id="shpModal" class="modal fade" role="dialog">
+	<div id="goFishModal" class="modal fade" role="dialog">
   		<div class="modal-dialog">
 
     		<!-- Modal content-->
@@ -200,7 +210,7 @@
 
  		</div>
 	</div>
-	<div id="goFishModal" class="modal fade" role="dialog">
+	<div id="shpModal" class="modal fade" role="dialog">
   		<div class="modal-dialog">
 
     		<!-- Modal content-->
@@ -218,6 +228,33 @@
         			</ul>
 					<img id="shp" src="images/goFish.png">
         			<p>Go Fish Project link: <a href="https://github.com/jgdepew/goFish">GitHub</a></p>
+      			</div>
+      			<div class="modal-footer">
+      			</div>
+    		</div>
+
+ 		</div>
+	</div>
+	<div id="blogModal" class="modal fade" role="dialog">
+  		<div class="modal-dialog">
+
+    		<!-- Modal content-->
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h4 class="modal-title">Missing Semicolon</h4>
+      			</div>
+      			<div class="modal-body">
+        			<p>A blog that serves as an outlet to express my problem solving ability, thought process, and general conundrums I have relevant to coding. Completely built from scratch independently.</p>
+        			<p>Technical skills used:</p>
+        			<ul>
+        				<li>Python</li>
+        				<li>Django</li>
+        				<li>Bootstrap</li>
+        				<li>postgreSQL</li>
+        				<li>Git</li>
+        			</ul>
+					<img id="shp" src="images/missingSemicolon.png">
+					<p>This project is under a private repository to protect its source code, but you can find a live version here: <a href="http://missingsemicolon.co">missingsemicolon.co</a>.</p>
       			</div>
       			<div class="modal-footer">
       			</div>
