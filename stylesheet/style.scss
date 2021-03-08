@@ -21,44 +21,212 @@ $color-template-5: #E86A4F;
 // $color-template-3: #FEF97C;
 // $color-template-4: #FCE181;
 // $color-template-5: #EDEAE5;
-$lulo-font-path: "../fonts/LuloCleanOutlineBold/font.woff2";
+$lulo-bold-outline-font-path: "../fonts/LuloCleanOutlineBold/font.woff2";
+$lulo-font-path: "../fonts/LuloCleanOne/font.woff2";
 
-@font-face {
-    // This is parsed as a normal function call that takes a quoted string.
-    src: url("#{$lulo-font-path}") format("woff2");
+	@font-face {
+    src: url("#{$lulo-bold-outline-font-path}") format("woff2");
     font-family: "LuloCleanOutline-Bold";
     font-weight: 100;
-}
+	}
+	@font-face {
+    src: url("#{$lulo-font-path}") format("woff2");
+    font-family: "Lulo";
+    font-weight: 100;
+	}
+	body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Lulo";
+		background: $color-template-1;
+	}
 
-html {
-    height: 100%;   
-}
-
-body {
-    height: 100%;
+:root {
+    --main-white-color: #f2f2f2;
+    --main-black-color: black;
+    --main-purple-color: #9e89b8;
+  }
+  
+  * {
+    padding: 0;
     margin: 0;
-    font-family: "LuloCleanOutline-Bold"
-}
-
-#header {
+    box-sizing: border-box;
+  }
+  
+  button {
+    background: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* CONTAINER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .wrapper > * {
+    padding: 20px;
+  }
+  
+  
+  /* HEADER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .page-header {
+    background: transparent;
+		z-index:200;
+		position: fixed;
+		width: 100%;
+  }
+  .page-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .page-header ul {
+    display: flex;
+    order: 1;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .page-header ul li:not(:last-child) {
+    padding-right: 15px;
+  }
+  
+  .page-header .cta-contact {
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 5px 18px;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+  
+  
+  /* MAIN
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .page-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    min-height: 350px;
+    background-blend-mode: luminosity;
+    // color: var(--main-white-color);
     // template 1
     // background: linear-gradient($color-template-5, $color-template-2, $color-template-3, $color-template-4);
     // template 2
     background: linear-gradient($color-template-1, $color-template-2, $color-template-4, $color-template-5);
     // template 3
     // background: linear-gradient($color-template-5, $color-template-4, $color-template-2, $color-template-1);
-    width: 100%;
-    height: 100%;
-}
-
-#title {
+		z-index:100;
+		font-family: "LuloCleanOutline-Bold";
+  }
+  
+  .page-main div {
+    max-width: 500px;
+  }
+  
+  .page-main h1 {
+    margin-bottom: 20px;
+  }
+  
+  .page-main p + p {
+    margin-top: 10px;
+  }
+  
+  .title {
     position: relative;
     margin: 0;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-11%, -200%);
+		animation: fadeIn 3s;
+	}
+	.title-name {
+		margin: 0;
+	}
+.red-border-bottom {
+	background-color: $color-template-5;
+	border-radius: 50%;
+	width: 100%;
+	height:200px;
+	position: relative;
+	top: -99px;
 }
-#title-name {
-    position: relative;
-    margin: 0;;
-}
+
+@keyframes fadeIn {
+		0% {
+			opacity:0;
+			top: -50px;
+		}
+		100% {
+			opacity:1;
+			top: 0px;
+		}
+	}
+  /* FOOTER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .page-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    background: $color-template-2;
+  }
+  
+  .page-footer ul {
+    display: flex;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .page-footer ul li:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+  
+  /* MQ
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media screen and (min-width: 550px) {
+    .page-header ul {
+      width: auto;
+      margin-top: 0;
+    }
+  
+    .page-header .cta-contact {
+      order: 1;
+    }
+  
+    .page-footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .page-footer ul {
+      margin-bottom: 0;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .page-main {
+      padding-left: 90px;
+			min-height: 650px;
+    }
+    .page-header {
+      padding-left: 90px;
+    }
+  }
